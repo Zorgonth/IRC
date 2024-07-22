@@ -303,8 +303,6 @@ void	Server::join(Command cmd, Users *user)
 
 void	Server::c_kick(Command cmd, Users *user)
 {
-	for (std::vector<std::string>::iterator it = cmd.params.begin();it != cmd.params.end();it++)
-		std::cout << *it << std::endl;
    std::string channel = cmd.params[0];
    std::vector<std::string> target = getTargets(cmd.params[1]);
    if (channel.empty())
